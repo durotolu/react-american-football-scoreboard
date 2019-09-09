@@ -30,21 +30,12 @@ let nameOfAwayTeam = 'away';
 let fieldGoalPoint = 3;
 //the above are changeable
    
-  const touchDown = (teamName, Point) => {//called on the clicked buttons bellow
+  const scoringFunctiuon = (teamName, point) => {//called on the clicked buttons bellow
     if (teamName === 'home') {
-      setHomeScore(homeValue + Point);
+      setHomeScore(homeValue + point);
     }
     else {
-      setAwayScore(awayValue + Point);
-    }
-  }
-
-  const fieldGoal = (teamName, Point) => {
-    if (teamName === 'home') {
-      setHomeScore(homeValue + Point);
-    }
-    else {
-      setAwayScore(awayValue + Point);
+      setAwayScore(awayValue + point);
     }
   }
 
@@ -72,12 +63,12 @@ let fieldGoalPoint = 3;
       <section className="buttons">
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-          <button onClick={() => touchDown(nameOfHomeTeam, touchDownPoint)} className="homeButtons__touchdown">Home Touchdown</button>
-          <button onClick={() => fieldGoal(nameOfHomeTeam, fieldGoalPoint)} className="homeButtons__fieldGoal">Home Field Goal</button>
+          <button onClick={() => scoringFunctiuon(nameOfHomeTeam, touchDownPoint)} className="homeButtons__touchdown">Home Touchdown</button>
+          <button onClick={() => scoringFunctiuon(nameOfHomeTeam, fieldGoalPoint)} className="homeButtons__fieldGoal">Home Field Goal</button>
         </div>
         <div className="awayButtons">
-          <button onClick={() => touchDown(nameOfAwayTeam, touchDownPoint)} className="awayButtons__touchdown">Away Touchdown</button>
-          <button onClick={() => fieldGoal(nameOfAwayTeam, fieldGoalPoint)} className="awayButtons__fieldGoal">Away Field Goal</button>
+          <button onClick={() => scoringFunctiuon(nameOfAwayTeam, touchDownPoint)} className="awayButtons__touchdown">Away Touchdown</button>
+          <button onClick={() => scoringFunctiuon(nameOfAwayTeam, fieldGoalPoint)} className="awayButtons__fieldGoal">Away Field Goal</button>
         </div>
       </section>
     </div>
