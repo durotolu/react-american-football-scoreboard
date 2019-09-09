@@ -8,6 +8,7 @@ function App() {
 
   const [homeValue, setHomeScore] = useState(0);
   const [awayValue, setAwayScore] = useState(0);
+  
   // const [value, setScore] = useState(0);
   // const [teamName, setName] = useState(0);
 
@@ -39,6 +40,8 @@ let fieldGoalPoint = 3;
     }
   }
 
+
+
   //handler('home', 30);
 
   return (
@@ -66,6 +69,7 @@ let fieldGoalPoint = 3;
           <button onClick={() => scoringFunctiuon(nameOfHomeTeam, touchDownPoint)} className="homeButtons__touchdown">Home Touchdown</button>
           <button onClick={() => scoringFunctiuon(nameOfHomeTeam, fieldGoalPoint)} className="homeButtons__fieldGoal">Home Field Goal</button>
         </div>
+
         <div className="awayButtons">
           <button onClick={() => scoringFunctiuon(nameOfAwayTeam, touchDownPoint)} className="awayButtons__touchdown">Away Touchdown</button>
           <button onClick={() => scoringFunctiuon(nameOfAwayTeam, fieldGoalPoint)} className="awayButtons__fieldGoal">Away Field Goal</button>
